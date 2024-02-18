@@ -1,6 +1,24 @@
+def prime_number(num):
+    if num > 1:
+        for x in range(2,num):
+            if num % x == 0:
+                return False
+        else:
+            return True
+    else:
+        return False
+
 def full_prima(N):
     # your code here
-    return ''
+    str_num = str(N)
+    if '-' in str_num:
+        return False
+    for digit in str_num:
+        if not prime_number(int(digit)):
+            return False
+    else:
+        return True
+
 
 if __name__ == '__main__':
     print(full_prima(2)) # True
