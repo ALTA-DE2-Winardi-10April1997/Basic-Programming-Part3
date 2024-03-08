@@ -14,7 +14,7 @@ def full_prima(N):
     if '-' in str_num:
         return False
     for digit in str_num:
-        if not prime_number(int(digit)):
+        if not prime_number(int(digit)) or not prime_number(N):
             return False
     else:
         return True
